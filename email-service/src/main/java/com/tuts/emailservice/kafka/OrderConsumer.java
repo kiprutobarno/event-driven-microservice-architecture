@@ -1,4 +1,4 @@
-package com.tuts.stockservice.kafka;
+package com.tuts.emailservice.kafka;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,6 @@ public class OrderConsumer {
     @KafkaListener(topics = "${spring.kafka.topic.name}", groupId = "${spring.kafka.consumer.group-id}") // subscribe to
                                                                                                          // topic
     public void consume(OrderEvent event) {
-        log.info("Order event received in stock service: " + event.toString());
-
+        log.info("Order event received in email service: " + event.toString());
     }
 }
