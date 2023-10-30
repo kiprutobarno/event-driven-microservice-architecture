@@ -8,10 +8,11 @@ spring:
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      topic:
-        name: order_topics
+
       properties:
         spring:
           json:
             trusted:
               packages: "*"
+    topic:
+      name: order_topics
